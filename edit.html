@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Handlebars Form - Edit</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="NO-CACHE">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="lib/jQuery-contextMenu/jquery.contextMenu.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="row cols-xs-12">
+            <h2>Handlebars Form - Edit</h2>
+        </div>
+        <div class="row">
+            <form id="form-content" class="form-horizontal bg-success img-rounded"></form>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-4">
+                <a href="index.html" class="btn btn-primary">Back</a>
+            </div>
+        </div>
+    </div>
+    <script id="contactHForm" type="text/x-handlebars-template">
+        {{#Contact}}
+            <div class="form-group">
+                <label for="Id" class="col-xs-2 control-label">Id:</label>
+                <div class="col-xs-2">
+                    <input id="Id" type="number" class="form-control" value="{{Id}}" title="Input your id" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="FirstName" class="col-xs-2 control-label">First Name:</label>
+                <div class="col-xs-2">
+                    <input id="FirstName" type="text" class="form-control" value="{{FirstName}}" title="Input your first name" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="LastName" class="col-xs-2 control-label">Last Name:</label>
+                <div class="col-xs-2">
+                    <input id="LastName" type="text" class="form-control" value="{{LastName}}" title="Input your last name" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Address1" class="col-xs-2 control-label">Address 1:</label>
+                <div class="col-xs-2">
+                    <input id="Address1" type="text" class="form-control" value="{{Address1}}" title="Input your address 1" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Address2" class="col-xs-2 control-label">Address 2:</label>
+                <div class="col-xs-2">
+                    <input id="Address2" type="text" class="form-control" value="{{Address2}}" title="Input your address 2" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Notes" class="col-xs-2 control-label">Notes:</label>
+                <div class="col-xs-2">
+                    <input id="Notes" type="text" class="form-control" value="{{Notes}}" title="Input your notes" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="ZipCode" class="col-xs-2 control-label">Zip Code:</label>
+                <div class="col-xs-2">
+                    <input id="ZipCode" type="number" class="form-control" value="{{ZipCode}}" title="Input your zip code" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="HomePhone" class="col-xs-2 control-label">Home Phone:</label>
+                <div class="col-xs-2">
+                    <input id="HomePhone" type="text" class="form-control" value="{{HomePhone}}" title="Input your home phone" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="WorkPhone" class="col-xs-2 control-label">Work Phone:</label>
+                <div class="col-xs-2">
+                    <input id="WorkPhone" type="text" class="form-control" value="{{WorkPhone}}" title="Input your work phone" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="CellPhone" class="col-xs-2 control-label">Cell Phone:</label>
+                <div class="col-xs-2">
+                    <input id="CellPhone" type="text" class="form-control" value="{{CellPhone}}" title="Input your cell phone" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="EMail" class="col-xs-2 control-label">E-mail:</label>
+                <div class="col-xs-2">
+                    <input id="EMail" type="email" class="form-control" value="{{EMail}}" title="Input your e-mail" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="CityId" class="col-xs-2 control-label">City Id:</label>
+                <div class="col-xs-2">
+                    <input id="CityId" type="text" class="form-control" value="{{CityId}}" title="Input your city id" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Active" class="col-xs-2 control-label">Active:</label>
+                <div class="col-xs-2">
+                    <input id="Active" type="text" class="form-control" value="{{Active}}" title="Input your active" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="ModifiedDt" class="col-xs-2 control-label">Modified Date:</label>
+                <div class="col-xs-2">
+                    <input id="ModifiedDt" type="datetime" class="form-control" value="{{formatDate 'medium' ModifiedDt}}" title="Input your modified date" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="CreateDt" class="col-xs-2 control-label">Create Date:</label>
+                <div class="col-xs-2">
+                    <input id="CreateDt" type="datetime" class="form-control" value="{{formatDate 'medium' CreateDt}}" title="Input your create date" />
+                </div>
+            </div>
+            <div class"form-group">
+                <div class="col-xs-10 cox-xs-push-2">
+                    <input id="submit" class="btn btn-success" type="submit" value="Save" />
+                </div>
+            </div>
+        {{/Contact}}
+    </script>
+
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/bootstrap/bootstrap.js"></script>
+    <script src="lib/moment/moment.js"></script>
+    <script src="lib/handlebars/handlebars.js"></script>
+    <script src="js/edit.js"></script>
+</body>
+</html>

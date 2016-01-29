@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Handlebars Form - Details</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="NO-CACHE">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="lib/jQuery-contextMenu/jquery.contextMenu.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="row cols-xs-12">
+            <h2>Handlebars Form - Details</h2>
+        </div>
+        <div class="row">
+        <form id="display-content" class="col-xs-6 bg-success img-rounded"></form>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-4">
+                <a href="index.html" class="btn btn-primary">Back</a>
+            </div>
+        </div>
+    </div>
+    <script id="contactHForm" type="text/x-handlebars-template">
+        {{#Contact}}
+        <div>
+            <label class="col-xs-3 text-right">Id:</label>
+            <label class="text-normal">{{Id}}&nbsp;</label>
+        </div>
+        <div>
+            <label class="col-xs-3 text-right">First Name:</label>
+            <label class="text-normal">{{FirstName}}&nbsp;</label>
+        </div>
+        <div>
+            <label class="col-xs-3 text-right">Last Name:</label>
+            <label class="text-normal">{{LastName}}&nbsp;</label>
+        </div>
+        <div>
+            <label class="col-xs-3 text-right">Address 1:</label>
+            <label class="text-normal">{{Address1}}&nbsp;</label>
+        </div>
+        <div>
+            <label class="col-xs-3 text-right">Address 2:</label>
+            <label class="text-normal">{{Address2}}&nbsp;</label>
+        </div>
+        <div>
+            <label class="col-xs-3 text-right">Notes:</label>
+            <label class="text-normal">{{Notes}}&nbsp;</label>
+        </div>
+        <div>
+            <label class="col-xs-3 text-right">Zip Code:</label>
+            <label class="text-normal">{{ZipCode}}&nbsp;</label>
+        </div>
+        <div>
+            <label class="col-xs-3 text-right">Home Phone:</label>
+            <label class="text-normal">{{HomePhone}}&nbsp;</label>
+        </div>
+        <div>
+            <label class="col-xs-3 text-right">Work Phone:</label>
+            <label class="text-normal">{{WorkPhone}}&nbsp;</label>
+        </div>
+        <div>
+            <label class="col-xs-3 text-right">Cell Phone:</label>
+            <label class="text-normal">{{CellPhone}}&nbsp;</label>
+        </div>
+        <div>
+            <label class="col-xs-3 text-right">E-mail:</label>
+            <label class="text-normal">{{EMail}}&nbsp;</label>
+        </div>
+        <div>
+            <label class="col-xs-3 text-right">City Id:</label>
+            <label class="text-normal">{{CityId}}&nbsp;</label>
+        </div>
+        <div>
+            <label class="col-xs-3 text-right">Active:</label>
+            <label class="text-normal">{{Active}}&nbsp;</label>
+        </div>
+        <div>
+            <label class="col-xs-3 text-right">Modified Date:</label>
+            <label class="text-normal">{{formatDate 'medium' ModifiedDt}}</label>
+        </div>
+        <div>
+            <label class="col-xs-3 text-right">Create Date:</label>
+            <label class="text-normal">{{formatDate 'medium' CreateDt}}</label>
+        </div>
+        {{/Contact}}
+    </script>
+
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/bootstrap/bootstrap.js"></script>
+    <script src="lib/moment/moment.js"></script>
+    <script src="lib/handlebars/handlebars.js"></script>
+    <script src="js/details.js"></script>
+</body>
+</html>

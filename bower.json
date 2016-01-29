@@ -1,0 +1,11 @@
+{
+	"name": "MustacheForm",
+	"private": true,
+  "dependencies": {
+    "bootstrap": "3.3.6",
+    "jQuery": "2.1.4",
+    "handlebars": "4.0.5",
+    "moment": "2.11.1",
+    "jQuery-contextMenu": "2.1.0"
+  }
+}
